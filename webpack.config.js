@@ -140,20 +140,6 @@ var options = {
       .concat(['.js', '.jsx', '.ts', '.tsx', '.css']),
   },
   plugins: [
-    /* !isDevelopment && new SentryWebpackPlugin({
-      org: "chainway",
-      project: "ordinalsafe",
-  
-      // Specify the directory containing build artifacts
-      include: "./build",
-  
-      // Auth tokens can be obtained from https://sentry.io/settings/account/api/auth-tokens/
-      // and needs the `project:releases` and `org:read` scopes
-      authToken: 'f4eaa6d382404118a283236f3fbf721765bafc654700403190f8aa120e25fff6',
-  
-      // Optionally uncomment the line below to override automatic release name detection
-      release: process.env.npm_package_version,
-    }), */
     isDevelopment && new ReactRefreshWebpackPlugin(),
     new NodePolyfillPlugin(),
     new CleanWebpackPlugin({ verbose: false }),
